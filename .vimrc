@@ -1,0 +1,128 @@
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Let Vundle manage Vundle:
+Plugin 'gmarik/Vundle.vim'
+
+"Plugins:
+Plugin 'flazz/vim-colorschemes'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-scripts/ScrollColors'
+Plugin 'vim-scripts/CSApprox'
+Plugin 'kien/ctrlp.vim'
+call vundle#end()
+filetype plugin indent on    " required
+
+let mapleader = ","
+
+if has("gui_running")
+	set guifont=Ubuntu\ Mono\ 12 
+endif
+
+" colorschemes:
+colors Tomorrow-Night
+"colors xoria256
+"colors zenburn
+"colors jellybeans
+"colors github
+
+
+":set textwidth=65	"set the textwidth
+"set backspace=indent,eol,start   " allow backspacing over everything in insert mode
+"set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
+"set list         "show whitespace
+"set mouse=a       "enable the mouse
+set showmatch     " set show matching parenthesis
+set t_Co=256
+set cursorline    " highlight the cursor line
+set autoindent    " always set autoindenting on
+set copyindent    " copy the previous indentation on autoindenting
+set guioptions-=T
+set hlsearch      " highlight search terms
+set ignorecase    " ignore case when searching
+set incsearch     " show search matches as you type
+set nowrap        " don't wrap lines
+set number        " always show line numbers
+set shiftwidth=4  " number of spaces to use for autoindenting
+set smartcase     " ignore case if search pattern is all lowercase, case-sensitive otherwise
+set smarttab      " insert tabs on the start of a line according to shiftwidth, not tabstop
+set tabstop=4     " a tab is four spaces
+set expandtab
+set wildignore=*.swp,*.bak,*.pyc,*.class
+
+" nerdcommenter toggle line comment:
+nmap <leader>c<Space> gcc
+
+" remove trailing whitespace for certain files
+autocmd FileType c,cpp,d,python,ruby,java autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+" syntastic:
+let g:syntastic_d_checkers = ['dmd']
+let g:syntastic_d_dmd_args = "-J/home/ylegall/.dub/packages/vibe-d-0.7.20/source/"
+
+" moving lines up and down with Alt:
+nnoremap <A-Down> :m+<CR>==
+nnoremap <A-Up> :m-2<CR>==
+inoremap <A-Down> <Esc>:m+<CR>==gi
+inoremap <A-Up> <Esc>:m-2<CR>==gi
+vnoremap <A-Down> :m'>+<CR>gv=gv
+vnoremap <A-Up> :m-2<CR>gv=gv
+
+" increase indent
+nnoremap <A-Right> >>
+vnoremap <A-Right> ><CR>gv
+inoremap <A-Right> <Esc>>>gi
+
+" decrease indent
+nnoremap <A-Left> <<
+vnoremap <A-Left> <<CR>gv
+inoremap <A-Left> <Esc><<gi
+
+" clear the highlighted search
+nmap <silent> <leader>/ :nohlsearch<CR>
+map <Esc> <Esc>:nohlsearch<CR>
+
+" delete line(s)
+noremap <C-E> dd
+inoremap <C-E> <Esc>ddi
+
+"fixing control command sequences with tmux
+"map OC <Right>
+"map [D <Left>
+
+map [1;2D <S-Left>
+map [1;2C <S-Right>
+map [5;5~ <C-PageUp>
+map [6;5~ <C-PageDown>
+
+map [1;5D <C-Left>
+map [1;5C <C-Right>
+"map ^[[1;5A <c-up>
+"map ^[[1;5B <c-down>
+
+" for tmux
+set mouse=a
+set ttymouse=xterm
+
+" Allow Ctrl+PgUp/PgDn in tmux
+"set t_kN=[6;5~
+"set t_kP=[5;5~
+
+"  move text and rehighlight
+vnoremap > ><CR>gv 
+vnoremap < <<CR>gv 
+
+" edit vimrc
+nnoremap <silent> <Leader>v :tabnew<CR>:e ~/.vimrc<CR>
+
+" ControlP
+" https://github.com/kien/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_cmd = 'CtrlP'
+
