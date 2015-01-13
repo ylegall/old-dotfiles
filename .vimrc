@@ -9,12 +9,15 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 "Plugins:
-Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/ScrollColors'
 Plugin 'vim-scripts/CSApprox'
 Plugin 'kien/ctrlp.vim'
+
+"color themes:
+
+
 call vundle#end()
 filetype plugin indent on    " required
 
@@ -22,27 +25,23 @@ let mapleader = ","
 
 if has("gui_running")
 	set guifont=Ubuntu\ Mono\ 12 
+    set guioptions-=T
 endif
 
 " colorschemes:
-colors Tomorrow-Night
+colors tomorrow-night-eighties
+"colors revelation
 "colors xoria256
 "colors zenburn
 "colors jellybeans
 "colors github
 
 
-":set textwidth=65	"set the textwidth
-"set backspace=indent,eol,start   " allow backspacing over everything in insert mode
-"set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
-"set list         "show whitespace
-"set mouse=a       "enable the mouse
-set showmatch     " set show matching parenthesis
 set t_Co=256
+set showmatch     " set show matching parenthesis
 set cursorline    " highlight the cursor line
 set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
-set guioptions-=T
 set hlsearch      " highlight search terms
 set ignorecase    " ignore case when searching
 set incsearch     " show search matches as you type
@@ -54,6 +53,12 @@ set smarttab      " insert tabs on the start of a line according to shiftwidth, 
 set tabstop=4     " a tab is four spaces
 set expandtab
 set wildignore=*.swp,*.bak,*.pyc,*.class
+"set backspace=indent,eol,start   " allow backspacing over everything in insert mode
+"set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
+"set list          "show whitespace
+"set mouse=a       "enable the mouse
+"set textwidth=65  "set the textwidth
+
 
 " nerdcommenter toggle line comment:
 nmap <leader>c<Space> gcc
