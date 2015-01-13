@@ -29,6 +29,7 @@ if has("gui_running")
 endif
 
 " colorschemes:
+let g:solarized_termcolors=256
 colors tomorrow-night-eighties
 "colors revelation
 "colors xoria256
