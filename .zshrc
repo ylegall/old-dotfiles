@@ -78,3 +78,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# start tmux using better colors support
+#alias tmux='TERM=xterm-256color tmux'
+alias tmux='tmux -2'
+
