@@ -30,7 +30,8 @@ endif
 
 " colorschemes:
 let g:solarized_termcolors=256
-colors tomorrow-night-eighties
+colors tomorrow-night
+"colors tomorrow-night-eighties
 "colors revelation
 "colors xoria256
 "colors zenburn
