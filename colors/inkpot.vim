@@ -107,7 +107,7 @@ if has("gui_running")
     hi SpecialChar    gui=NONE   guifg=#c080d0   guibg=#404040
     hi Statement      gui=NONE   guifg=#808bed   guibg=NONE
     hi Todo           gui=BOLD   guifg=#303030   guibg=#d0a060
-    hi Type           gui=NONE   guifg=#ff8bff   guibg=NONE
+    hi Type           gui=BOLD   guifg=#ff8bff   guibg=NONE
     hi Underlined     gui=BOLD   guifg=#df9f2d   guibg=NONE
     hi TaglistTagName gui=BOLD   guifg=#808bed   guibg=NONE
 
@@ -142,9 +142,9 @@ if has("gui_running")
     endif
 else
     if ! g:inkpot_black_background
-        exec "hi Normal         cterm=NONE   ctermfg=" . <SID>X(79) . " ctermbg=" . <SID>X(80)
+        exec "hi Normal         cterm=NONE   ctermfg=7 ctermbg=" . <SID>X(80)
     else
-        exec "hi Normal         cterm=NONE   ctermfg=" . <SID>X(79) . " ctermbg=" . <SID>X(16)
+        exec "hi Normal         cterm=NONE   ctermfg=7 " . <SID>X(79) . " ctermbg=" . <SID>X(80)
     endif
 
     exec "hi IncSearch      cterm=BOLD   ctermfg=" . <SID>X(80) . " ctermbg=" . <SID>X(73)
@@ -177,7 +177,7 @@ else
     exec "hi FoldColumn     cterm=NONE   ctermfg=" . <SID>X(39) . " ctermbg=" . <SID>X(80)
 
     exec "hi Directory      cterm=NONE   ctermfg=" . <SID>X(28) . " ctermbg=" . "NONE"
-    exec "hi LineNr         cterm=NONE   ctermfg=" . <SID>X(39) . " ctermbg=" . <SID>X(80)
+    exec "hi LineNr         cterm=NONE   ctermfg=" . <SID>X(8) . " ctermbg=" . <SID>X(80)
     exec "hi NonText        cterm=BOLD   ctermfg=" . <SID>X(39) . " ctermbg=" . "NONE"
     exec "hi SpecialKey     cterm=BOLD   ctermfg=" . <SID>X(55) . " ctermbg=" . "NONE"
     exec "hi Title          cterm=BOLD   ctermfg=" . <SID>X(48) . " ctermbg=" . "NONE"
@@ -185,7 +185,7 @@ else
 
     exec "hi Comment        cterm=NONE   ctermfg=" . <SID>X(52) . " ctermbg=" . "NONE"
     exec "hi Constant       cterm=NONE   ctermfg=" . <SID>X(73) . " ctermbg=" . "NONE"
-    exec "hi String         cterm=NONE   ctermfg=" . <SID>X(73) . " ctermbg=" . <SID>X(81)
+    exec "hi String         cterm=NONE   ctermfg=" . <SID>X(73) . " ctermbg=" . <SID>X(80)
     exec "hi Error          cterm=NONE   ctermfg=" . <SID>X(79) . " ctermbg=" . <SID>X(32)
     exec "hi Identifier     cterm=NONE   ctermfg=" . <SID>X(53) . " ctermbg=" . "NONE"
     exec "hi Ignore         cterm=NONE"
@@ -195,7 +195,7 @@ else
     exec "hi SpecialChar    cterm=NONE   ctermfg=" . <SID>X(55) . " ctermbg=" . <SID>X(81)
     exec "hi Statement      cterm=NONE   ctermfg=" . <SID>X(27) . " ctermbg=" . "NONE"
     exec "hi Todo           cterm=BOLD   ctermfg=" . <SID>X(16) . " ctermbg=" . <SID>X(57)
-    exec "hi Type           cterm=NONE   ctermfg=" . <SID>X(71) . " ctermbg=" . "NONE"
+    exec "hi Type           cterm=BOLD   ctermfg=" . <SID>X(71) . " ctermbg=" . "NONE"
     exec "hi Underlined     cterm=BOLD   ctermfg=" . <SID>X(77) . " ctermbg=" . "NONE"
     exec "hi TaglistTagName cterm=BOLD   ctermfg=" . <SID>X(39) . " ctermbg=" . "NONE"
 
