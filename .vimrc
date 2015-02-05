@@ -14,6 +14,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/ScrollColors'
 Plugin 'vim-scripts/CSApprox'
 Plugin 'kien/ctrlp.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'rking/ag.vim'
 
 "color themes:
 
@@ -70,7 +72,6 @@ autocmd FileType c,cpp,d,python,ruby,java autocmd BufWritePre <buffer> :%s/\s\+$
 
 " syntastic:
 let g:syntastic_d_checkers = ['dmd']
-let g:syntastic_d_dmd_args = "-J/home/ylegall/.dub/packages/vibe-d-0.7.20/source/"
 
 " moving lines up and down with Alt:
 nnoremap <A-Down> :m+<CR>==
