@@ -16,6 +16,7 @@ Plugin 'vim-scripts/CSApprox'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'rking/ag.vim'
+Plugin 'Yggdroot/indentLine'
 
 "color themes:
 
@@ -72,6 +73,8 @@ autocmd FileType c,cpp,d,python,ruby,java autocmd BufWritePre <buffer> :%s/\s\+$
 
 " syntastic:
 let g:syntastic_d_checkers = ['dmd']
+
+let g:indentLine_char = '┆' "┆︙
 
 " moving lines up and down with Alt:
 nnoremap <A-Down> :m+<CR>==
