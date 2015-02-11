@@ -62,7 +62,7 @@ set noswapfile
 "set textwidth=65  "set the textwidth
 
 " enable mouse
-if ('hasMouse')
+if has('mouse')
     set mouse+=a
 endif
 
