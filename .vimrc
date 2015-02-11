@@ -24,7 +24,7 @@ filetype plugin indent on    " required
 let mapleader = ","
 
 if has("gui_running")
-	set guifont=Ubuntu\ Mono\ 12 
+    set guifont=Ubuntu\ Mono\ 12
     set guioptions-=T
 endif
 
@@ -55,12 +55,24 @@ set smarttab      " insert tabs on the start of a line according to shiftwidth, 
 set tabstop=4     " a tab is four spaces
 set expandtab
 set wildignore=*.swp,*.bak,*.pyc,*.class
+set nobackup
+set noswapfile
 "set backspace=indent,eol,start   " allow backspacing over everything in insert mode
 "set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
-"set list          "show whitespace
-"set mouse=a       "enable the mouse
 "set textwidth=65  "set the textwidth
 
+" enable mouse
+if ('hasMouse')
+    set mouse+=a
+endif
+
+" copy
+"vmap <C-c> "+y
+vmap <leader>y "+y
+
+" show trailing whitespace
+set list
+set listchars=trail:·
 
 " nerdcommenter toggle line comment:
 nmap <leader>c<Space> gcc
@@ -114,7 +126,6 @@ map [1;5C <C-Right>
 "map ^[[1;5B <c-down>
 
 " for tmux
-set mouse=a
 set ttymouse=xterm
 
 " Allow Ctrl+PgUp/PgDn in tmux
@@ -122,8 +133,8 @@ set ttymouse=xterm
 "set t_kP=[5;5~
 
 "  move text and rehighlight
-vnoremap > ><CR>gv 
-vnoremap < <<CR>gv 
+vnoremap > ><CR>gv
+vnoremap < <<CR>gv
 
 " edit vimrc
 nnoremap <silent> <Leader>v :tabnew<CR>:e ~/.vimrc<CR>
