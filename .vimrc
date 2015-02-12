@@ -69,8 +69,10 @@ if has('mouse')
 endif
 
 " copy
-"vmap <C-c> "+y
-vmap <leader>y "+y
+if has('clipboard')
+    set clipboard=unnamedplus
+    vmap <leader>y "+y
+endif
 
 " show trailing whitespace
 set list
