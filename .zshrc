@@ -49,8 +49,10 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+PATH="$PATH:$HOME/bin"
+export PATH
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,4 +84,5 @@ source $ZSH/oh-my-zsh.sh
 # start tmux using better colors support
 #alias tmux='TERM=xterm-256color tmux'
 alias tmux='tmux -2'
+alias idea="nohup $HOME/intellij/idea/bin/idea.sh &"
 
