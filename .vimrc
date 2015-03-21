@@ -23,7 +23,7 @@ Plugin 'Yggdroot/indentLine'
 call vundle#end()
 filetype plugin indent on    " required
 
-let mapleader = ","
+let mapleader = "\<Space>"
 
 if has("gui_running")
     set guifont=Ubuntu\ Mono\ 12
