@@ -58,7 +58,7 @@ hi SpellRare guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=189
 hi Comment guifg=#444444 guibg=NONE guisp=NONE gui=italic ctermfg=238 ctermbg=NONE cterm=NONE
 hi Character guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=77 ctermbg=NONE cterm=NONE
 hi Float guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=NONE
-hi Number guifg=#875f5f guibg=NONE guisp=NONE gui=NONE ctermfg=132 ctermbg=NONE cterm=NONE
+hi Number guifg=#875f5f guibg=NONE guisp=NONE gui=NONE ctermfg=137 ctermbg=NONE cterm=NONE
 hi Boolean guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=bold
 hi Operator guifg=#afd787 guibg=NONE guisp=NONE gui=bold ctermfg=150 ctermbg=NONE cterm=bold
 hi CursorLine guifg=NONE guibg=#222E30 guisp=#222E30 gui=NONE ctermfg=NONE ctermbg=235 cterm=NONE
@@ -80,7 +80,7 @@ hi SpellCap guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=189 
 hi VertSplit guifg=#192224 guibg=#5E6C70 guisp=#5E6C70 gui=bold ctermfg=235 ctermbg=66 cterm=bold
 hi Exception guifg=#d70000 guibg=NONE guisp=NONE gui=bold ctermfg=160 ctermbg=NONE cterm=bold
 hi Keyword guifg=#5faf87 guibg=NONE guisp=NONE gui=bold ctermfg=72 ctermbg=NONE cterm=bold
-hi Type guifg=#5f87d7 guibg=NONE guisp=NONE gui=bold ctermfg=99 ctermbg=NONE cterm=bold
+hi Type guifg=#5f87d7 guibg=NONE guisp=NONE gui=bold ctermfg=63 ctermbg=NONE cterm=bold
 hi DiffChange guifg=NONE guibg=#492224 guisp=#492224 gui=NONE ctermfg=NONE ctermbg=52 cterm=NONE
 hi Cursor guifg=#121212 guibg=#8787af guisp=#8787af gui=NONE ctermfg=233 ctermbg=103 cterm=NONE
 hi SpellLocal guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=189 ctermbg=235 cterm=underline
