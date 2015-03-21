@@ -32,7 +32,8 @@ endif
 
 " colorschemes:
 let g:solarized_termcolors=256
-colors tomorrow-night
+colors neogotham
+"colors tomorrow-night
 "colors tomorrow-night-eighties
 "colors revelation
 "colors xoria256
@@ -87,7 +88,9 @@ autocmd FileType c,cpp,d,python,ruby,java autocmd BufWritePre <buffer> :%s/\s\+$
 " syntastic:
 let g:syntastic_d_checkers = ['dmd']
 
+" indent line
 let g:indentLine_char = '┆' "┆︙
+let g:indentLine_color_term = 239
 
 " moving lines up and down with Alt:
 nnoremap <A-Down> :m+<CR>==
@@ -148,4 +151,7 @@ nnoremap <silent> <Leader>v :tabnew<CR>:e ~/.vimrc<CR>
 let g:ctrlp_map = '<c-p>'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_cmd = 'CtrlP'
+
+" Ag
+nnoremap <leader>a :Ag<Space>
 
