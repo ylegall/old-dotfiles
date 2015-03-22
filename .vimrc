@@ -80,7 +80,7 @@ set list
 set listchars=trail:·
 
 " nerdcommenter toggle line comment:
-nmap <leader>c<Space> gcc
+nmap cc <leader>c<Space>
 
 " remove trailing whitespace for certain files
 autocmd FileType c,cpp,d,python,ruby,java autocmd BufWritePre <buffer> :%s/\s\+$//e
@@ -153,5 +153,13 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_cmd = 'CtrlP'
 
 " Ag
-nnoremap <leader>a :Ag<Space>
+if executable('ag')
+    " Use ag over grep
+    set grepprg=ag\ --nogroup\ --nocolor
+    nnoremap <leader>a :Ag<Space>
+    " Use ag in CtrlP for listing files
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+    " bind K to grep word under cursor
+    nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+endif
 
