@@ -19,6 +19,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'rking/ag.vim'
 Plugin 'Yggdroot/indentLine'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 filetype plugin indent on    " required
@@ -80,7 +81,7 @@ set list
 set listchars=trail:·
 
 " nerdcommenter toggle line comment:
-nmap <leader>c<Space> gcc
+nmap cc <leader>c<Space>
 
 " remove trailing whitespace for certain files
 autocmd FileType c,cpp,d,python,ruby,java autocmd BufWritePre <buffer> :%s/\s\+$//e
@@ -154,4 +155,9 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " Ag
 nnoremap <leader>a :Ag<Space>
+
+" NerdTree
+map <leader>d :NERDTreeToggle<CR>
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
