@@ -91,7 +91,8 @@ let g:syntastic_d_checkers = ['dmd']
 
 " indent line
 let g:indentLine_char = '┆' "┆︙
-let g:indentLine_color_term = 239
+let g:indentLine_color_term = 235
+let g:indentLine_noConcealCursor = 1
 
 " moving lines up and down with Alt:
 nnoremap <A-Down> :m+<CR>==
@@ -152,6 +153,7 @@ nnoremap <silent> <Leader>v :tabnew<CR>:e ~/.vimrc<CR>
 let g:ctrlp_map = '<c-p>'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_cmd = 'CtrlP'
+map <leader>b :CtrlPMRU<CR>
 
 " Ag
 nnoremap <leader>a :Ag<Space>
