@@ -19,6 +19,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'rking/ag.vim'
 Plugin 'Yggdroot/indentLine'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 filetype plugin indent on    " required
@@ -90,7 +91,8 @@ let g:syntastic_d_checkers = ['dmd']
 
 " indent line
 let g:indentLine_char = '┆' "┆︙
-let g:indentLine_color_term = 239
+let g:indentLine_color_term = 235
+let g:indentLine_noConcealCursor = 1
 
 " moving lines up and down with Alt:
 nnoremap <A-Down> :m+<CR>==
@@ -151,6 +153,7 @@ nnoremap <silent> <Leader>v :tabnew<CR>:e ~/.vimrc<CR>
 let g:ctrlp_map = '<c-p>'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_cmd = 'CtrlP'
+map <leader>b :CtrlPMRU<CR>
 
 " Ag
 if executable('ag')
@@ -162,4 +165,9 @@ if executable('ag')
     " bind K to grep word under cursor
     nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 endif
+
+" NerdTree
+map <leader>d :NERDTreeToggle<CR>
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 

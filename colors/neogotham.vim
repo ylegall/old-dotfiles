@@ -58,9 +58,9 @@ hi SpellRare guifg=#F9F9FF guibg=#192224 guisp=#192224 gui=underline ctermfg=189
 hi Comment guifg=#444444 guibg=NONE guisp=NONE gui=italic ctermfg=238 ctermbg=NONE cterm=NONE
 hi Character guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=77 ctermbg=NONE cterm=NONE
 hi Float guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=NONE
-hi Number guifg=#875f5f guibg=NONE guisp=NONE gui=NONE ctermfg=137 ctermbg=NONE cterm=NONE
+hi Number guifg=#875f5f guibg=NONE guisp=NONE gui=NONE ctermfg=138 ctermbg=NONE cterm=NONE
 hi Boolean guifg=#A1A6A8 guibg=NONE guisp=NONE gui=NONE ctermfg=248 ctermbg=NONE cterm=bold
-hi Operator guifg=#afd787 guibg=NONE guisp=NONE gui=bold ctermfg=150 ctermbg=NONE cterm=bold
+hi Operator guifg=#afd787 guibg=NONE guisp=NONE gui=bold ctermfg=159 ctermbg=NONE cterm=bold
 hi CursorLine guifg=NONE guibg=#222E30 guisp=#222E30 gui=NONE ctermfg=NONE ctermbg=235 cterm=NONE
 hi CursorLineNR guibg=#222E30 guisp=#222E30 ctermfg=68 ctermbg=235 cterm=NONE
 hi TabLineFill guifg=#5f00ff guibg=#6c6c6c guisp=#6c6c6c gui=bold ctermfg=1 ctermbg=240 cterm=bold
