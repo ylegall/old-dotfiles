@@ -53,10 +53,12 @@ set ignorecase    " ignore case when searching
 set incsearch     " show search matches as you type
 set nowrap        " don't wrap lines
 set number        " always show line numbers
+
 set shiftwidth=4  " number of spaces to use for autoindenting
 set smartcase     " ignore case if search pattern is all lowercase, case-sensitive otherwise
 set smarttab      " insert tabs on the start of a line according to shiftwidth, not tabstop
 set tabstop=4     " a tab is four spaces
+
 set expandtab
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set nobackup
@@ -78,13 +80,17 @@ endif
 
 " show trailing whitespace
 set list
-set listchars=trail:·
+set listchars=trail:·,precedes:«,extends:»,tab:▸\ 
 
 " nerdcommenter toggle line comment:
 nmap cc <leader>c<Space>
 
 " remove trailing whitespace for certain files
 autocmd FileType c,cpp,d,python,ruby,java autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+" highlight parens
+"autocmd BufRead,BufNewFile * syn match parens /[(){}]/ | hi parens ctermfg=167
+"autocmd BufRead,BufNewFile * syn match parens /[(){}]/
 
 " syntastic:
 let g:syntastic_d_checkers = ['dmd']
@@ -170,4 +176,13 @@ endif
 map <leader>d :NERDTreeToggle<CR>
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" override settings:
+set shiftwidth=4  " number of spaces to use for autoindenting
+set smartcase     " ignore case if search pattern is all lowercase, case-sensitive otherwise
+set smarttab      " insert tabs on the start of a line according to shiftwidth, not tabstop
+set tabstop=4     " a tab is four spaces
+set expandtab
+
+syntax on
 
