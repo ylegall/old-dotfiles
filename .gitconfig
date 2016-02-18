@@ -1,0 +1,25 @@
+[color]
+    ui = auto
+    branch = auto
+    diff = auto
+    status = auto
+[core]
+    pager = less -FMRiX
+    excludesfile = ~/.gitignore
+        editor = /usr/bin/vim
+[push]
+    default = simple
+[alias]
+    dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%ar%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+    stat = status --short
+    st = status
+    br = branch -vv
+    co = checkout
+    ci = commit
+    lg = log --abbrev-commit --pretty=format:'%C(yellow)%h%d%Creset %ar %C(cyan)%an%Creset   %s'
+    gr = log --abbrev-commit --decorate --pretty=oneline --all --graph
+[amazon]
+    append-cr-url = true
+    pull-request-by-default = true
+[merge]
+    ff = only
